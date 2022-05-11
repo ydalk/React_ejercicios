@@ -1,9 +1,13 @@
 //import React, {Fragment} from 'react';
 import React from 'react';
 import PropTypes from 'prop-types'
+import { propsOfNode } from 'enzyme/build/Utils';
 
 
-//puede tener varios argumentos
+// A. se puede enviar datos a través de las props desde el index
+//const PrimeraApp = ( props ) => {
+
+//puede tener varios argumentos, desestructurados desde los props {saludo}
 const PrimeraApp = ({saludo, subtitulo}) => {
     
     //no imprime booleano ni objetos
@@ -12,10 +16,11 @@ const PrimeraApp = ({saludo, subtitulo}) => {
     return (
         // <> equivale al colocar un <Fragment></Fragment>
         /*para mostrar objetos debo usar la etiqueta <pre></pre> y 
-        pasarle un objketo JSON.stringify 
+        pasarle un objeto JSON.stringify 
          */
 
        <>
+            {/*A.  <h1> { props.saludo } </h1> */}
             <h1> { saludo } </h1>
             {/* <pre> { JSON.stringify( saludo, null, 3)} </pre> */}
             <p>{ subtitulo }</p>
